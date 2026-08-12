@@ -5,7 +5,7 @@ MODEL_PATH = "models/face_detection_yunet_2026may.onnx"
 ANNOTATION_FILE = "wider_face_val_bbx_gt.txt"
 IMAGE_DIR = "images"
 
-CONFIDENCE = 0.6
+CONFIDENCE = 0.3
 IOU_THRESHOLD = 0.5
 
 

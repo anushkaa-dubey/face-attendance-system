@@ -6,7 +6,7 @@ MODEL_PATH = "models/scrfd_500m.onnx"
 ANNOTATION_FILE = "wider_face_val_bbx_gt.txt"
 IMAGE_DIR = "images"
 
-CONFIDENCE = 0.5
+CONFIDENCE = 0.3
 IOU_THRESHOLD = 0.5
 INPUT_SIZE = 640
 
