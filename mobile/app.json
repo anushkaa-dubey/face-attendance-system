@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "Face Attendance AI",
+    "slug": "face-attendance-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "This app requires access to your photo library to select employee face photos for attendance marking.",
+        "NSCameraUsageDescription": "This app requires access to your camera to take employee face photos for attendance marking."
+      }
+    },
+    "android": {
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_MEDIA_IMAGES"
+      ]
+    },
+    "plugins": [
+      "expo-font"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+export const theme = {
+  colors: {
+    background: '#F8FAFC',
+    card: '#FFFFFF',
+    cardBorder: '#E2E8F0',
+    cardBorderHover: '#CBD5E1',
+    primary: '#2563EB',
+    primaryDark: '#1D4ED8',
+    primaryLight: '#EFF6FF',
+    primaryGlow: 'rgba(37, 99, 235, 0.08)',
+    secondary: '#4F46E5',
+    success: '#059669',
+    successBg: '#ECFDF5',
+    successBorder: '#A7F3D0',
+    warning: '#D97706',
+    warningBg: '#FFFBEB',
+    warningBorder: '#FDE68A',
+    danger: '#DC2626',
+    dangerBg: '#FEF2F2',
+    dangerBorder: '#FCA5A5',
+    textPrimary: '#0F172A',
+    textSecondary: '#475569',
+    textMuted: '#94A3B8',
+    white: '#FFFFFF',
+    inputBg: '#F1F5F9',
+  },
+  spacing: {
+    xs: 4,
+    sm: 8,
+    md: 16,
+    lg: 24,
+    xl: 32,
+  },
+  borderRadius: {
+    sm: 8,
+    md: 12,
+    lg: 16,
+    xl: 24,
+    full: 9999,
+  },
+  shadows: {
+    card: {
+      shadowColor: '#64748B',
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.06,
+      shadowRadius: 8,
+      elevation: 2,
+    },
+    button: {
+      shadowColor: '#2563EB',
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.2,
+      shadowRadius: 8,
+      elevation: 3,
+    }
+  }
+};
