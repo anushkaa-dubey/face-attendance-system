@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 850" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .border { stroke: #000000; stroke-width: 2; fill: #ffffff; }
+      .alt-bg { stroke: #000000; stroke-width: 2; fill: #f8f8f8; }
+      .container { stroke: #000000; stroke-width: 1; fill: none; rx: 12; }
+      .title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #000000; text-anchor: middle; }
+      .container-title { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #000000; }
+      .box-title { font-family: Arial, sans-serif; font-size: 17px; font-weight: bold; fill: #000000; text-anchor: middle; }
+      .text-body { font-family: Arial, sans-serif; font-size: 14px; fill: #444444; text-anchor: middle; }
+      .text-label { font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; fill: #000000; text-anchor: middle; }
+      .line { stroke: #000000; stroke-width: 2; fill: none; }
+      .divider { stroke: #000000; stroke-width: 1; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#000000" />
+    </marker>
+  </defs>
+
+  <rect class="bg" width="100%" height="100%" />
+
+  <!-- Main Title -->
+  <text x="650" y="45" class="title">FACE ATTENDANCE SYSTEM - SYSTEM ARCHITECTURE</text>
+  <line x1="50" y1="65" x2="1250" y2="65" class="line" />
+
+  <!-- Containers -->
+  <rect x="40" y="90" width="270" height="690" class="container" />
+  <text x="60" y="115" class="container-title">CLIENT TIER</text>
+
+  <rect x="340" y="90" width="310" height="690" class="container" />
+  <text x="360" y="115" class="container-title">FASTAPI BACKEND TIER</text>
+
+  <rect x="680" y="90" width="290" height="690" class="container" />
+  <text x="700" y="115" class="container-title">AI MODEL ENGINE</text>
+
+  <rect x="1000" y="90" width="260" height="690" class="container" />
+  <text x="1020" y="115" class="container-title">STORAGE &amp; MEMORY</text>
+
+  <!-- Client Boxes -->
+  <g transform="translate(60, 160)">
+    <rect width="230" height="110" rx="10" class="border" />
+    <text x="115" y="30" class="box-title">React Native App</text>
+    <line x1="10" y1="42" x2="220" y2="42" class="divider" />
+    <text x="115" y="62" class="text-body">Mobile UI (Expo)</text>
+    <text x="115" y="82" class="text-body">Camera &amp; Server Config</text>
+  </g>
+
+  <g transform="translate(60, 320)">
+    <rect width="230" height="100" rx="10" class="border" />
+    <text x="115" y="30" class="box-title">HTTP API Client</text>
+    <line x1="10" y1="42" x2="220" y2="42" class="divider" />
+    <text x="115" y="62" class="text-body">multipart/form-data</text>
+    <text x="115" y="82" class="text-body">Async fetch API</text>
+  </g>
+
+  <g transform="translate(60, 620)">
+    <rect width="230" height="110" rx="10" class="border" />
+    <text x="115" y="30" class="box-title">Attendance View</text>
+    <line x1="10" y1="42" x2="220" y2="42" class="divider" />
+    <text x="115" y="62" class="text-body">Displays History</text>
+    <text x="115" y="82" class="text-body">Status Cards &amp; Alerts</text>
+  </g>
+
+  <path d="M 175 270 L 175 320" class="line" marker-end="url(#arrow)" />
+  <path d="M 175 420 L 175 620" class="line" marker-end="url(#arrow)" />
+
+  <!-- Backend Boxes -->
+  <g transform="translate(360, 160)">
+    <rect width="270" height="110" rx="10" class="border" />
+    <text x="135" y="30" class="box-title">FastAPI App Router</text>
+    <line x1="10" y1="42" x2="260" y2="42" class="divider" />
+    <text x="135" y="62" class="text-body">backend/main.py</text>
+    <text x="135" y="82" class="text-body">CORS &amp; Lifespan Startup</text>
+  </g>
+
+  <g transform="translate(360, 310)">
+    <rect width="270" height="110" rx="10" class="border" />
+    <text x="135" y="30" class="box-title">Recognition Route</text>
+    <line x1="10" y1="42" x2="260" y2="42" class="divider" />
+    <text x="135" y="62" class="text-body">POST /recognize</text>
+    <text x="135" y="82" class="text-body">Orchestrate Pipeline</text>
+  </g>
+
+  <g transform="translate(360, 460)">
+    <rect width="270" height="100" rx="10" class="border" />
+    <text x="135" y="30" class="box-title">Attendance Route</text>
+    <line x1="10" y1="42" x2="260" y2="42" class="divider" />
+    <text x="135" y="62" class="text-body">POST / GET /attendance</text>
+    <text x="135" y="82" class="text-body">Duplicate Prevention</text>
+  </g>
+
+  <g transform="translate(360, 620)">
+    <rect width="270" height="110" rx="10" class="border" />
+    <text x="135" y="30" class="box-title">SQLAlchemy Session</text>
+    <line x1="10" y1="42" x2="260" y2="42" class="divider" />
+    <text x="135" y="62" class="text-body">database.py (get_db)</text>
+    <text x="135" y="82" class="text-body">SQLite Connection Engine</text>
+  </g>
+
+  <path d="M 495 270 L 495 310" class="line" marker-end="url(#arrow)" />
+  <path d="M 495 420 L 495 460" class="line" marker-end="url(#arrow)" />
+  <path d="M 495 560 L 495 620" class="line" marker-end="url(#arrow)" />
+
+  <!-- AI Model Boxes -->
+  <g transform="translate(700, 160)">
+    <rect width="250" height="120" rx="10" class="border" />
+    <text x="125" y="30" class="box-title">Face Detector (SCRFD)</text>
+    <line x1="10" y1="42" x2="240" y2="42" class="divider" />
+    <text x="125" y="62" class="text-body">scrfd_500m.onnx</text>
+    <text x="125" y="82" class="text-body">Cutoff: 0.5 | 5 Landmarks</text>
+    <text x="125" y="102" class="text-body">Crop &amp; Align Bounding Box</text>
+  </g>
+
+  <g transform="translate(700, 340)">
+    <rect width="250" height="120" rx="10" class="border" />
+    <text x="125" y="30" class="box-title">Face Recognizer</text>
+    <line x1="10" y1="42" x2="240" y2="42" class="divider" />
+    <text x="125" y="62" class="text-body">w600k_mbf.onnx</text>
+    <text x="125" y="82" class="text-body">MobileFaceNet ArcFace</text>
+    <text x="125" y="102" class="text-body">Generates 512D Vector</text>
+  </g>
+
+  <g transform="translate(700, 520)">
+    <rect width="250" height="120" rx="10" class="border" />
+    <text x="125" y="30" class="box-title">Cosine Matcher</text>
+    <line x1="10" y1="42" x2="240" y2="42" class="divider" />
+    <text x="125" y="62" class="text-body">Cosine Sim Threshold: 0.5</text>
+    <text x="125" y="82" class="text-body">Finds Highest Match</text>
+    <text x="125" y="102" class="text-body">Identifies Name</text>
+  </g>
+
+  <path d="M 825 280 L 825 340" class="line" marker-end="url(#arrow)" />
+  <rect x="770" y="300" width="110" height="22" class="border" rx="4" />
+  <text x="825" y="315" class="text-label">Face ROI Crop</text>
+
+  <path d="M 825 460 L 825 520" class="line" marker-end="url(#arrow)" />
+  <rect x="775" y="480" width="100" height="22" class="border" rx="4" />
+  <text x="825" y="495" class="text-label">512D Vector</text>
+
+  <!-- Storage Boxes -->
+  <g transform="translate(1020, 200)">
+    <rect width="220" height="160" rx="10" class="border" />
+    <text x="110" y="30" class="box-title">In-Memory Gallery</text>
+    <line x1="10" y1="42" x2="210" y2="42" class="divider" />
+    <text x="110" y="65" class="text-body">Gallery.load_gallery()</text>
+    <text x="110" y="85" class="text-body">Scans Train Dataset</text>
+    <text x="110" y="105" class="text-body">Computes L2 Avg Vector</text>
+    <text x="110" y="125" class="text-body">Dict: {name: vector}</text>
+  </g>
+
+  <g transform="translate(1020, 540)">
+    <rect width="220" height="160" rx="10" class="border" />
+    <text x="110" y="30" class="box-title">SQLite Database</text>
+    <line x1="10" y1="42" x2="210" y2="42" class="divider" />
+    <text x="110" y="65" class="text-body">attendance.db</text>
+    <text x="110" y="85" class="text-body">Table: attendance</text>
+    <text x="110" y="105" class="text-body">id, person_name</text>
+    <text x="110" y="125" class="text-body">date, time, status</text>
+  </g>
+
+  <!-- Cross Connections -->
+  <path d="M 290 370 L 360 370" class="line" marker-end="url(#arrow)" />
+  <rect x="290" y="340" width="110" height="22" class="border" rx="4" />
+  <text x="345" y="355" class="text-label">POST /recognize</text>
+
+  <path d="M 290 670 L 360 510" class="line" marker-end="url(#arrow)" />
+  <rect x="270" y="580" width="110" height="22" class="border" rx="4" />
+  <text x="325" y="595" class="text-label">GET /attendance</text>
+
+  <path d="M 630 215 L 700 215" class="line" marker-end="url(#arrow)" />
+  <path d="M 630 365 L 700 400" class="line" marker-end="url(#arrow)" />
+
+  <path d="M 1130 360 L 950 580" class="line" marker-end="url(#arrow)" />
+  <path d="M 630 200 L 1020 240" class="line" marker-end="url(#arrow)" />
+  <rect x="770" y="130" width="110" height="22" class="border" rx="4" />
+  <text x="825" y="145" class="text-label">Startup Build</text>
+
+  <path d="M 630 675 L 1020 620" class="line" marker-end="url(#arrow)" />
+</svg>

@@ -4,6 +4,22 @@ FastAPI backend server for the React Native Face Attendance Application. It perf
 
 ---
 
+## 1. System Architecture Flowchart
+
+Below is the simple black-and-white system architecture overview showing how the React Native Mobile App, FastAPI Backend, ONNX Neural Network Models, In-Memory Gallery, and SQLite Database interact.
+
+![System Architecture Flowchart](docs/images/system_architecture.png)
+
+---
+
+## 2. Recognition & Attendance Pipeline Flowchart
+
+Below is the detailed step-by-step decision flowchart for the `/recognize` endpoint execution.
+
+![Face Recognition & Attendance Pipeline Flowchart](docs/images/recognition_pipeline.png)
+
+---
+
 ## Model Files Location
 
 The backend uses the following ONNX models located in the `models/` directory:
@@ -30,7 +46,7 @@ The backend uses the following ONNX models located in the `models/` directory:
 
 ---
 
-## 1. Installation
+## 3. Installation
 
 Ensure you have Python 3.9+ installed.
 
@@ -51,7 +67,7 @@ pip install fastapi uvicorn python-multipart opencv-python numpy onnxruntime sql
 
 ---
 
-## 2. How to Start FastAPI Server
+## 4. How to Start FastAPI Server
 
 Run the following command from the project root directory:
 
@@ -69,7 +85,7 @@ The server will start at `http://127.0.0.1:8000`. You can also access the intera
 
 ---
 
-## 3. API Endpoints Overview
+## 5. API Endpoints Overview
 
 | Method | Endpoint | Description |
 |---|---|---|
@@ -80,7 +96,7 @@ The server will start at `http://127.0.0.1:8000`. You can also access the intera
 
 ---
 
-## 4. Example Requests & Expected Responses
+## 6. Example Requests & Expected Responses
 
 ### A. Health Check (`GET /health`)
 
@@ -205,7 +221,7 @@ curl -X GET http://127.0.0.1:8000/attendance
 
 ---
 
-## Configuration & Settings
+## 7. Configuration & Settings
 
 You can tune recognition settings in `backend/config.py` or via environment variables:
 
